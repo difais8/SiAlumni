@@ -1,0 +1,386 @@
+/* =========================================
+   MODERN LIGHT CHAT THEME (REFERENSI)
+   ========================================= */
+
+/* Palet Warna Tema Terang */
+:root {
+    --chat-bg-main: #ffffff;       /* Latar belakang utama (Putih) */
+    --chat-bg-sidebar: #2f3136;    /* Sidebar kiri (Tetap gelap untuk kontras) */
+    --chat-bg-secondary: #f2f3f5;  /* Area input, header sekunder (Abu-abu terang) */
+    --chat-border: #e3e5e8;        /* Garis pemisah */
+    --chat-text-dark: #2c2f33;     /* Teks utama (Hampir hitam) */
+    --chat-text-muted: #747f8d;    /* Teks sekunder (Abu-abu) */
+    --chat-hover: #f8f9fa;         /* Efek hover di area putih */
+    --chat-active: #e3e5e8;        /* Efek aktif */
+    --chat-accent: #5865f2;        /* Warna aksen (misal: biru untuk link/tombol) */
+}
+
+/* Container Utama */
+.chat-wrapper {
+    height: 85vh; /* Sedikit lebih tinggi */
+    display: flex;
+    background-color: var(--chat-bg-main);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--chat-border);
+    color: var(--chat-text-dark);
+    position: relative;
+}
+
+/* --- SIDEBAR (ROOM LIST) - Tetap Gelap untuk Estetika --- */
+.chat-sidebar {
+    width: 260px;
+    background-color: #515e85; /* Sidebar tetap gelap */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.chat-sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.room-list {
+    overflow-y: auto;
+    padding: 15px 10px;
+    flex-grow: 1;
+}
+
+.room-item {
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #b9bbbe; /* Teks abu-abu terang di background gelap */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.room-item:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: #ffffff;
+}
+
+.room-item.active {
+    background-color: rgba(79, 84, 92, 0.6); /* Warna aktif di sidebar gelap */
+    color: #ffffff;
+}
+
+.room-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.room-category-label {
+    padding: 15px 10px 5px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8e9297;
+    text-transform: uppercase;
+}
+
+/* --- MAIN CHAT AREA (Background Putih) --- */
+.chat-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--chat-bg-main); /* Background PUTIH */
+    position: relative;
+    min-width: 0;
+}
+
+.chat-header {
+    padding: 15px 25px;
+    border-bottom: 2px solid var(--chat-border); /* Border lebih tegas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px; /* Header lebih tinggi */
+    background-color: var(--chat-bg-main);
+}
+
+.chat-header-title {
+    font-weight: 800; /* Judul lebih tebal */
+    font-size: 1.2rem;
+    color: var(--chat-text-dark);
+    display: flex;
+    align-items: center;
+}
+
+.chat-header-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--chat-text-muted);
+}
+
+/* Area Pesan */
+.chat-messages {
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antar pesan lebih lega */
+    background-color: var(--chat-bg-main); /* Pastikan background putih */
+}
+
+/* --- MESSAGE STYLE (Theme Terang) --- */
+.discord-message {
+    display: flex;
+    padding: 5px 0;
+    position: relative;
+    line-height: 1.5;
+}
+
+.discord-message:hover {
+    background-color: var(--chat-hover); /* Hover abu-abu sangat terang */
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.message-avatar {
+    width: 30px; /* Avatar sedikit lebih besar */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-top: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.message-content-wrapper {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.message-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.message-username {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--chat-text-dark); /* Nama berwarna gelap */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.message-username:hover {
+    text-decoration: underline;
+    color: var(--chat-accent);
+}
+
+.message-timestamp {
+    font-size: 0.8rem;
+    color: var(--chat-text-muted); /* Waktu abu-abu */
+    font-weight: 500;
+}
+
+.message-text {
+    color: var(--chat-text-dark); /* Isi pesan berwarna gelap */
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Tombol Hapus */
+.message-actions {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    background: var(--chat-bg-main);
+    border: 1px solid var(--chat-border);
+    border-radius: 5px;
+    padding: 4px;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.discord-message:hover .message-actions {
+    display: flex;
+}
+
+/* --- INPUT AREA (Background Abu-abu Terang) --- */
+.chat-input-area {
+    padding: 20px 25px;
+    background-color: var(--chat-bg-secondary); /* Area input abu-abu terang */
+    border-top: 1px solid var(--chat-border);
+}
+
+.chat-input-wrapper {
+    background-color: var(--chat-bg-main); /* Input field putih */
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--chat-border); /* Border halus */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Override EmojiOneArea untuk Tema Terang */
+.emojionearea {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.emojionearea .emojionearea-editor {
+    color: var(--chat-text-dark) !important; /* Teks input hitam */
+    min-height: 44px;
+    font-size: 1rem;
+    padding: 10px 12px;
+}
+
+.emojionearea .emojionearea-button {
+    opacity: 0.6; /* Ikon emoji normal (gelap) */
+    transition: opacity 0.2s;
+}
+.emojionearea .emojionearea-button:hover {
+    opacity: 1;
+}
+.emojionearea .emojionearea-picker {
+    background-color: var(--chat-bg-main); /* Picker background putih */
+    border: 1px solid var(--chat-border);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+.emojionearea .emojionearea-wrapper:after {
+    display: none; /* Hilangkan panah picker */
+}
+
+/* Tombol Kirim & Tambah */
+.btn-chat-action {
+    background: transparent;
+    border: none;
+    color: var(--chat-text-muted);
+    padding: 0 15px;
+    transition: all 0.2s;
+    font-size: 1.3rem;
+}
+.btn-chat-action:hover {
+    color: var(--chat-accent);
+    transform: scale(1.1);
+}
+.btn-send-discord {
+    color: var(--chat-accent); /* Tombol kirim berwarna aksen */
+}
+
+/* --- MOBILE RESPONSIVE --- */
+.mobile-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--chat-text-dark);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* --- MESSAGE GROUPING STYLE (DISCORD STYLE) --- */
+
+/* 1. Pesan Utama (Header + Avatar) */
+.discord-message.group-start {
+    margin-top: 15px; /* Jarak antar grup user beda */
+    padding-top: 5px;
+}
+
+/* 2. Pesan Lanjutan (Tanpa Avatar) */
+.discord-message.group-followup {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 0;
+    min-height: auto; /* Reset tinggi */
+}
+
+/* Sembunyikan Avatar & Header di pesan lanjutan */
+.discord-message.group-followup .message-avatar,
+.discord-message.group-followup .message-header {
+    display: none;
+}
+
+/* Rata Kanan Teks (Agar sejajar dengan teks di atasnya) */
+/* Avatar 50px + Margin 20px = 70px indent */
+.discord-message.group-followup .message-content-wrapper {
+    padding-left: 70px; 
+}
+
+/* Tampilkan jam kecil di kiri saat hover (Opsional ala Discord) */
+.discord-message.group-followup:hover::before {
+    content: attr(data-timestamp);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--chat-text-muted);
+    width: 50px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .chat-wrapper {
+        height: 90vh;
+        border-radius: 0; /* Full screen di HP */
+        border: none;
+    }
+
+    .chat-sidebar {
+        position: absolute;
+        left: -280px;
+        top: 0;
+        bottom: 0;
+        z-index: 110;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.3);
+    }
+
+    .chat-sidebar.show {
+        left: 0;
+    }
+
+    .mobile-toggle-btn {
+        display: block;
+    }
+
+    .chat-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 100;
+        display: none;
+        backdrop-filter: blur(2px);
+    }
+    .chat-overlay.show {
+        display: block;
+    }
+    
+    .chat-header {
+        padding: 10px 15px;
+        height: 60px;
+    }
+    
+    .chat-messages {
+        padding: 15px;
+    }
+    
+    .message-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+}
+

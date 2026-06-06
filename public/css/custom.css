@@ -1,0 +1,184 @@
+.my-bgcolor-card{
+    background-color: #3a5c8a;
+    color:white;
+}
+.borderr{
+    border-radius: 15px;
+    border: solid;
+}
+
+.myflex{
+    display: flex;
+}
+
+.mytablecolor{
+    color:black;
+    font-weight: bold;
+    background-color: #4B49AC;
+}
+
+@media (min-width: 700px) {
+    .nonflex{
+        display:flex;
+    }
+    .paddingmid{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+@media (max-width: 500px) {
+    .myflex{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Untuk rata kiri */
+table.dataTable th.text-start {
+    text-align: left !important;
+}
+
+/* Untuk rata tengah */
+table.dataTable th.text-center {
+    text-align: center !important;
+}
+
+/* Untuk rata kanan */
+table.dataTable th.text-end {
+    text-align: right !important;
+}
+
+/* Untuk rata kiri */
+table.dataTable td.text-start {
+    text-align: left !important;
+}
+
+/* Untuk rata tengah */
+table.dataTable td.text-center {
+    text-align: center !important;
+}
+
+/* Untuk rata kanan */
+table.dataTable td.text-end {
+    text-align: right !important;
+}
+
+td.kolom-action {
+    /* display: flex; */
+    align-items: center;
+    gap: 8px;
+}
+
+td.kolom-action .btn.btn-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    
+    /* INI BARIS KUNCINYA: Menghilangkan spasi vertikal yang mendorong ikon ke atas */
+    line-height: 1 !important;
+}
+
+td.kolom-status .badge {
+    padding: 10px 15px !important;
+}
+
+.list-group.mycolor{
+    color:#495057;
+}
+
+td.kolom-keterangan {
+    max-width: 400px;
+    white-space: normal !important; 
+    word-wrap: break-word;
+}
+
+/* Targetkan toolbar (tanpa spasi antara class) */
+.note-toolbar.card-header {
+    background: transparent !important;
+}
+
+/* Targetkan statusbar dengan membuatnya lebih spesifik */
+.note-editor .note-statusbar {
+    background: transparent !important;
+    border-top: 1px solid #dee2e6 !important; /* Bonus: mengembalikan garis pemisah */
+}
+
+/* Pastikan area tulis tetap putih (sudah ada) */
+.note-editor .note-editable {
+    background-color: #FFFFFF !important;
+}
+
+
+.card-custom-teal {
+    background-color: #1ABC9C; 
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-blue {
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-lightblue {
+    background-color: #12a8f3;
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-dark-slate {
+    background-color: #6C757D;
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-teal:hover {
+    background-color: #1eddb7; 
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-blue:hover {
+    background-color: #509cf2;
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-lightblue:hover {
+    background-color: #23b4fd;
+    color: #ffffff;
+    border: none;
+}
+
+.card-custom-dark-slate:hover {
+    background-color: #85909a;  
+    color: #ffffff;
+    border: none;
+}
+
+.chart-legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+
+.chart-container {
+    height: 250px;
+    position: relative;
+}
+
+.chart-doughnut-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.text-merah {
+    color: red;
+}
+
+.theadMC{
+    background-color: lavender;
+    color: black;
+}
