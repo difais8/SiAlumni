@@ -151,8 +151,7 @@ class ChatHandler {
                     this.load(false, this.page, false);
                     Swal.fire("Terhapus", "", "success");
                 }
-            }).
-            fail((xhr) => {
+            }).fail((xhr) => {
                 Swal.fire("Gagal!", xhr.responseJSON?.error || "Error server", "error");
             });
         });
