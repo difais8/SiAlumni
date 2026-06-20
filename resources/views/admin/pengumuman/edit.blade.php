@@ -42,14 +42,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Tanggal Mulai</label>
-                                <input type="date" class="form-control" name="tgl_mulai" value="{{ old('tgl_mulai', $pengumuman->tgl_mulai) }}">
+                                <label>Tanggal Mulai *</label>
+                                <input type="date" class="form-control" name="tgl_mulai" value="{{ old('tgl_mulai', $pengumuman->tgl_mulai) }}" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Tanggal Selesai</label>
-                                <input type="date" class="form-control" name="tgl_selesai" value="{{ old('tgl_selesai', $pengumuman->tgl_selesai) }}">
+                                <label>Tanggal Selesai *</label>
+                                <input type="date" class="form-control" name="tgl_selesai" value="{{ old('tgl_selesai', $pengumuman->tgl_selesai) }}" required>
                             </div>
                         </div>
                     </div>

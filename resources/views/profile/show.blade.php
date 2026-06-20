@@ -98,10 +98,6 @@
                         <div class="col-sm-4 text-muted">No HP</div>
                         <div class="col-sm-8 font-weight-bold">{{ $user->profile->nomor_telepon ?? '-' }}</div>
                     </div>
-                    <div class="row mb-2">
-                        <div class="col-sm-4 text-muted">Pendidikan Saat Masuk</div>
-                        <div class="col-sm-8 font-weight-bold">{{ $user->profile->pendidikan_masuk ?? '-' }}</div>
-                    </div>
                 @endif
             </div>
         </div>
@@ -111,7 +107,7 @@
             <div class="card shadow-sm mb-4 p-1">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
                     <h5 class="mb-0 font-weight-bold text-dark"><i class="mdi mdi-briefcase"></i> Riwayat Pekerjaan</h5>
-                    <a href="{{ route('riwayat-pekerjaan.create') }}" class="btn btn-sm btn-outline-primary"><i class="mdi mdi-plus"></i> Kelola</a>
+                    <a href="{{ route('riwayat-pekerjaan.create') }}" class="btn btn-sm btn-outline-primary"><i class="mdi mdi-plus"></i> Tambah</a>
                 </div>
                 <div class="card-body p-0">
                     <ul class="list-group list-group-flush">
@@ -143,7 +139,7 @@
             <div class="card shadow-sm mb-4 p-1">
                 <div class="card-header bg-white d-flex justify-content-between align-items-center">
                     <h5 class="mb-0 font-weight-bold text-dark"><i class="mdi mdi-school"></i> Riwayat Pendidikan</h5>
-                    <a href="{{ route('riwayat-pendidikan.create') }}" class="btn btn-sm btn-outline-primary"><i class="mdi mdi-plus"></i> Kelola</a>
+                    <a href="{{ route('riwayat-pendidikan.create') }}" class="btn btn-sm btn-outline-primary"><i class="mdi mdi-plus"></i> Tambah</a>
                 </div>
                 <div class="card-body p-0">
                     <ul class="list-group list-group-flush">

@@ -54,7 +54,7 @@
             <div class="row mt-4">
                 {{-- KOLOM KIRI: KONTEN --}}
                 <div class="col-md-8 mb-4">
-                    <h4 class="mb-3 font-weight-bold">Deskripsi Event</h4>
+                    <h4 class="mb-3 font-weight-bold">Detail Pengumuman</h4>
                     <div class="content-body text-justify text-dark" style="font-size: 1.05rem; line-height: 1.8;">
                         {!! $pengumuman->isi_konten !!}
                     </div>
@@ -62,7 +62,7 @@
 
                 {{-- KOLOM KANAN: INFO TAMBAHAN --}}
                 <div class="col-md-4">
-                    <div class="bg-light p-4 rounded shadow-sm">
+                    <div class="p-4 rounded">
                         <div class="mb-4">
                             <h6 class="font-weight-bold text-uppercase text-secondary mb-2" style="font-size: 0.8rem; letter-spacing: 1px;">Lokasi</h6>
                             <p class="text-dark font-weight-bold mb-0">

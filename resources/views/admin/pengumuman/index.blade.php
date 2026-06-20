@@ -64,7 +64,7 @@
     <hr class="my-5" style="border-top: 2px dashed #ccc;">
     
     {{-- BAGIAN 2: EVENT TERLEWAT (OVERDUE) --}}
-    <h4 class="mb-3 text-muted"><i class="mdi mdi-history"></i> Event Selesai / Terlewat</h4>
+    <h4 class="mb-3 text-muted"><i class="mdi mdi-history"></i> Pengumuman / Event Selesai</h4>
     <div class="row">
         @forelse($eventLewat as $event)
             <div class="col-md-4 grid-margin stretch-card">
@@ -76,7 +76,7 @@
                             <span class="text-muted">Tidak ada poster</span>
                         @endif
                     </div>
-                    <div class="card-body bg-light">
+                    <div class="card-body">
                         <h5 class="card-title font-weight-bold mb-2 text-muted">{{ Str::limit($event->judul, 30) }}</h5>
                         <p class="text-muted mb-2" style="font-size: 0.9em;">
                             <i class="mdi mdi-calendar"></i> 

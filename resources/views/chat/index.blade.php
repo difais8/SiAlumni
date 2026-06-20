@@ -17,7 +17,7 @@
                 <div class="room-list">
                     <div class="room-item active"
                         onclick="Chat.changeRoom(null, 'Global Chat', this)">
-                        Global-Chat
+                        Global Chat
                     </div>
 
                     <div class="room-category-label mt-3">Room Angkatan</div>

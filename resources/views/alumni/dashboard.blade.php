@@ -61,7 +61,7 @@
                         {{ Str::limit(strip_tags($event->isi_konten), 100) }}
                     </p>
                     <a href="{{ route('alumni.pengumuman.show', $event->id) }}" class="btn btn-outline-primary btn-block rounded-pill">
-                        Detail Event
+                        Detail Pengumuman / Event
                     </a>
                 </div>
             </div>

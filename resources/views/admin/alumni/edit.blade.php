@@ -186,7 +186,7 @@
     <div class="col-md-12 grid-margin">
         <div class="card shadow-sm">
             <div class="card-body">
-                <h4 class="card-title">Edit Role Pengguna</h4>
+                <h4 class="card-title">Edit Role Alumni</h4>
                 <form class="forms-sample" action="{{ route('admin.alumni.update', $alumni->id) }}" method="POST">
                     @csrf
                     @method('PUT')

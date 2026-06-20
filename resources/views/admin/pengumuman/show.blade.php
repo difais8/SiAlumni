@@ -54,7 +54,7 @@
         <div class="row mt-4">
             {{-- KOLOM KIRI: KONTEN SUMMERNOTE --}}
             <div class="col-md-8">
-                <h4 class="mb-3 font-weight-bold">Detail Event</h4>
+                <h4 class="mb-3 font-weight-bold">Detail Pengumuman</h4>
                 <div class="content-body text-justify text-dark">
                     {{-- PENTING: Gunakan {!! !!} untuk merender HTML dari Summernote --}}
                     {!! $pengumuman->isi_konten !!}
@@ -63,7 +63,7 @@
             
             {{-- KOLOM KANAN: SIDEBAR INFO --}}
             <div class="col-md-4">
-                <div class="bg-light p-4 rounded">
+                <div class="p-4 rounded">
                     
                     {{-- Lokasi --}}
                     <div class="mb-4">
@@ -95,7 +95,7 @@
                     <div class="mt-4 pt-3 border-top">
                         {{-- TOMBOL EDIT --}}
                         <a href="{{ route('admin.pengumuman.edit', $pengumuman->id) }}" class="btn btn-info btn-block mb-2">
-                            <i class="mdi mdi-pencil"></i> Edit Event
+                            <i class="mdi mdi-pencil"></i> Edit Pengumuman
                         </a>
                         {{-- TOMBOL HAPUS --}}
                         <form action="{{ route('admin.pengumuman.destroy', $pengumuman->id) }}" 
@@ -104,7 +104,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-block">
-                                <i class="mdi mdi-delete"></i> Hapus Event
+                                <i class="mdi mdi-delete"></i> Hapus Pengumuman
                             </button>
                         </form>
                     </div>
