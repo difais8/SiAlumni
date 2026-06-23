@@ -114,14 +114,20 @@ class ChatController extends Controller
         // 3. Ketua (Y/Z) bisa hapus pesan orang lain HANYA DI CHAT ANGKATANNYA
         elseif ($user->role=='ketua_alumni') {
             // Cek apakah chat ini ada di room angkatan milik si ketua
-            if ($chat->angkatan_id != null && $chat->angkatan_id == $user->profile->angkatan_id) {
-                $canDelete = true;
+            if (
+                $chat->angkatan_id != null && (
+                    $chat->angkatan_id == $user->profile->angkatan_id ||
+                    $chat->angkatan_id == $user->profile->angkatan2_id ||
+                    $chat->angkatan_id == $user->profile->angkatan3_id
+                )
+            ) {
+            $canDelete = true;
             }
         }
 
         elseif ($user->role == 'ketua_angkatan') {
             // Cek apakah angkatan chat ini SAMA dengan angkatan jabatannya
-            if ($chat->angkatan_id == $user->profile->jabatan_angkatan_id) {
+            if ( $chat->angkatan_id != null && $chat->angkatan_id == $user->profile->jabatan_angkatan_id) {
                 $canDelete = true;
             }
         }
